@@ -1,0 +1,24 @@
+/*------------------------------------*\
+    #ZINDEX
+
+    Controls all vertical stacking in one place
+    Reference: http://css-tricks.com/handling-z-index/
+
+
+    Can now use elsewhere in code with:
+
+    	.header {
+			z-index: map-get($zindex, header);
+		}
+\*------------------------------------*/
+
+$zindex: (
+  mobile-nav     : 10000,
+  hamburger       : 9999,
+  navigation   : 9500,
+  // modal     : 9000,
+  overlay   : 8000,
+  // dropdown  : 7000,
+  // header    : 6000,
+  // footer    : 5000
+);

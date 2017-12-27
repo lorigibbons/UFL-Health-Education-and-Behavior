@@ -1,0 +1,177 @@
+/*------------------------------------*\
+    #NAV
+\*------------------------------------*/
+
+.nav {
+	display: none;  //hide for mobile portrait 768px
+	background-color: $dark-orange;
+	text-transform: uppercase;
+	height: 35px;
+	width: 100%;
+	position: sticky;
+	top: 0;
+
+
+	@include breakpoint(portrait) {  //display over 768px
+		display: grid;
+		grid-template-columns: repeat(12, 1fr);
+		z-index: map-get($zindex, navigation);
+	}
+
+	&__navigation {
+		display: flex;  //parent
+		@include no-bullets;
+		grid-column: 1 / span 7;
+		align-items: center;
+
+		> li {
+			flex: 1; //child
+			text-align: center;
+
+			> a {
+
+				&:hover {
+				}
+				&:link {
+					text-decoration: none;
+				}
+				&:visited {
+
+				}
+				&:active {
+				}
+			}
+		}
+	}
+	ul.nav__social-media {
+		@include no-bullets;
+		grid-column: 11 / span 2;
+		display: flex;
+		align-items: center;
+		padding-top: 7px;
+
+		> li {
+				flex: 1;
+		}
+	}
+}
+
+
+	/*------------------------------------*\
+	    #HAMBURGER
+	\*------------------------------------*/
+.hamburger {
+	position: absolute;
+	left: 10px;
+	top: 10px;
+	z-index: map-get($zindex, hamburger);
+
+	@include breakpoint(portrait) {  //do not dislay this after 768 px
+		display: none;
+	}
+
+	svg {
+		fill: $light-blue;
+		height: 30px;
+		width: 30px;
+	}
+}
+
+.mobile-nav {
+	background: $dark-orange;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	position: fixed;
+	left: 0;
+	right: 0;
+	bottom: 100%;
+	top: -100%;
+	transition: bottom 0.25s ease-in-out, top 0.25s ease-in-out;
+	z-index: map-get($zindex, mobile-nav);
+
+	&.open {
+		bottom: 0;
+		top: 0;
+	}
+
+	&__close {
+		color: black;
+		position: absolute;
+		right: 10px;
+		top: 10px;
+
+		a {
+			text-decoration: none;
+			font-size: em(32px);
+		}
+	}
+
+	ul {
+		@include no-bullets;
+
+		li {
+			font-family: $body;
+			font-size: em(24px);
+			line-height: 1.33;
+			letter-spacing: 2.7px;
+			text-align: center;
+			margin-bottom: 20px;
+		}
+
+		a {
+			color: white;
+			text-decoration: none;
+			text-transform: uppercase;
+		}
+	}
+}
+
+
+/*------------------------------------*\
+    #HEADER
+\*------------------------------------*/
+header{
+		@include overlay;
+
+		.header {
+		  max-height: 650px;
+		  /*display: grid;
+		  grid-template-columns: repeat(12, 1fr);*/
+			position: relative;
+			//Overlay Mixin
+
+			&__text {
+				position: relative;
+				color: white;
+				text-align: left;
+				top: 50px;
+				left: 40px;
+				z-index: map-get($zindex, overlay);
+
+				&__thin {
+					font-family: $body;
+				}
+
+				&__tagline {
+					position: relative;
+					color: white;
+					text-transform: uppercase;
+					top: 100px;
+					left: 40px;
+					padding: 5px 0 5px 0;
+					border-top: 1px solid white;
+					border-bottom: 1px solid white;
+					z-index: map-get($zindex, overlay);
+				}
+			}
+
+			&__image {
+				/*grid-column: 1 / span 12;*/
+				position: absolute;
+			  width: 100%;
+			  object-fit: cover;
+				top: 0;
+			}
+		}
+}

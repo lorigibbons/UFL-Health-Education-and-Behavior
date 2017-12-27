@@ -1,0 +1,50 @@
+/*------------------------------------*\
+    #GLOBALS
+\*------------------------------------*/
+html,
+html > body,
+body {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	font-size: 16px;
+}
+
+::selection {
+}
+
+h1 {
+  font-family: $serif-head;
+	font-weight: normal;
+	font-size: 3.2vw;
+}
+
+h2 {
+  font-family: $body;
+	font-weight: normal;
+	font-size: 2.2vw;
+}
+
+h3 {
+  font-family: $sans-head-italic;
+	font-weight: normal;
+	font-size: em(16px);
+}
+
+h4 {
+  font-family: $sans-head;
+}
+
+h5 {
+  font-family: $sans-head;
+}
+
+h6 {
+  font-family: $sans-head;
+}
+
+p {
+  font-family: $body;
+}
