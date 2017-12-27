@@ -18,13 +18,13 @@ body {
 h1 {
   font-family: $serif-head;
 	font-weight: normal;
-	font-size: 3.2vw;
+	font-size: em(50px);
 }
 
 h2 {
   font-family: $body;
 	font-weight: normal;
-	font-size: 2.2vw;
+	font-size: em(40px);
 }
 
 h3 {

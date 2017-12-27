@@ -134,6 +134,11 @@
 header{
 		@include overlay;
 
+		.under-overline {
+			border-bottom: .5px solid white;
+			border-top: .5px solid white;
+		}
+
 		.header {
 		  max-height: 650px;
 		  /*display: grid;
@@ -147,6 +152,8 @@ header{
 				text-align: left;
 				top: 50px;
 				left: 40px;
+				bottom: 50px;
+				right: 40px;
 				z-index: map-get($zindex, overlay);
 
 				&__thin {
@@ -157,11 +164,11 @@ header{
 					position: relative;
 					color: white;
 					text-transform: uppercase;
-					top: 100px;
+					top: 66px;
 					left: 40px;
+					bottom: 50px;
+					right: 40px;
 					padding: 5px 0 5px 0;
-					border-top: 1px solid white;
-					border-bottom: 1px solid white;
 					z-index: map-get($zindex, overlay);
 				}
 			}
