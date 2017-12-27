@@ -470,5 +470,16 @@ header .header {
 \*------------------------------------*/
 /*------------------------------------*    #HOME
 \*------------------------------------*/
+.cta {
+  background-color: #0021a5;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: center; }
+  .cta__learn-more {
+    grid-column: 1 / span 4; }
+  .cta__apply {
+    grid-column: 5 / span 4; }
+  .cta__contact {
+    grid-column: 9 / span 4; }
 
 /*# sourceMappingURL=main.css.map */

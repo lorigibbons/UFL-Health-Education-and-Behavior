@@ -1,3 +1,24 @@
 /*------------------------------------*\
     #HOME
 \*------------------------------------*/
+
+.site-wrapper {
+
+}
+
+.cta {
+  background-color: $blue;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  text-align: center;
+
+  &__learn-more {
+    grid-column: 1 / span 4;
+  }
+  &__apply {
+    grid-column: 5 / span 4;
+  }
+  &__contact {
+    grid-column: 9 / span 4;
+  }
+}
