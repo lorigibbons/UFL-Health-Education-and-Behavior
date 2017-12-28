@@ -1,3 +1,15 @@
 /*------------------------------------*\
     #BUTTONS
 \*------------------------------------*/
+button {
+  border: 3px solid #f37021;
+  color: #f7670d;
+  cursor: pointer;
+  display: inline-block;
+  font: 700 16px/1 serif;
+  letter-spacing: 2px;
+  padding: 15px 20px;
+  text-decoration: none;
+  text-transform: uppercase;
+  background-color: transparent;
+}

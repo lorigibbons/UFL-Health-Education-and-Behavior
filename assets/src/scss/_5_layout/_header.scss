@@ -131,8 +131,9 @@
 /*------------------------------------*\
     #HEADER
 \*------------------------------------*/
-header{
+header {
 		@include overlay;
+		position: relative;
 
 		.under-overline {
 			border-bottom: .5px solid white;
@@ -147,7 +148,7 @@ header{
 			//Overlay Mixin
 
 			&__text {
-				position: relative;
+				position: absolute;
 				color: white;
 				text-align: left;
 				top: 50px;
@@ -161,7 +162,7 @@ header{
 				}
 
 				&__tagline {
-					position: relative;
+					position: absolute;
 					color: white;
 					text-transform: uppercase;
 					top: 66px;
@@ -175,8 +176,8 @@ header{
 
 			&__image {
 				/*grid-column: 1 / span 12;*/
-				position: absolute;
 			  width: 100%;
+				max-height: 700px;
 			  object-fit: cover;
 				top: 0;
 			}
