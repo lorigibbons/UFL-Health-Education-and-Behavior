@@ -179,7 +179,7 @@ body {
   font-size: 16px; }
 
 h1 {
-  font-family: "Chunk";
+  font-family: "GentonaAlt";
   font-weight: normal;
   font-size: 3.125em; }
 
@@ -189,18 +189,18 @@ h2 {
   font-size: 2.5em; }
 
 h3 {
-  font-family: "GentonaItalic";
+  font-family: "GentonaItalicAlt";
   font-weight: normal;
   font-size: 1em; }
 
 h4 {
-  font-family: "Gentona"; }
+  font-family: "GentonaAlt"; }
 
 h5 {
-  font-family: "Gentona"; }
+  font-family: "GentonaAlt"; }
 
 h6 {
-  font-family: "Gentona"; }
+  font-family: "GentonaAlt"; }
 
 p {
   font-family: "GentonaLight"; }
@@ -261,12 +261,12 @@ input[type=submit] {
   src: url("../../../assets/dist/fonts/Chunk.ttf"); }
 
 @font-face {
-  font-family: 'Gentona';
-  src: url("../../../assets/dist/fonts/GentonaExtraBoldDEMO.otf"); }
+  font-family: 'GentonaAlt';
+  src: url("../../../assets/dist/fonts/ArchivoBlack-Regular.ttf"); }
 
 @font-face {
-  font-family: 'GentonaItalic';
-  src: url("../../../assets/dist/fonts/GentonaExtraBold ItalicDEMO.otf"); }
+  font-family: 'GentonaItalicAlt';
+  src: url("../../../assets/dist/fonts/Archivo-BoldItalic.ttf"); }
 
 @font-face {
   font-family: 'GentonaLight';
