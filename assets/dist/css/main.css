@@ -143,6 +143,7 @@ a img.aligncenter {
 /*------------------------------------*    #VARIABLES
 \*------------------------------------*/
 /* GLOBAL */
+/* PADDING */
 /* COLORS */
 /* FONTS */
 /*------------------------------------*    #THEME
@@ -189,7 +190,7 @@ h2 {
   font-size: 2.5em; }
 
 h3 {
-  font-family: "GentonaItalicAlt";
+  font-family: "GentonaAlt";
   font-weight: normal;
   font-size: 1em; }
 
@@ -203,7 +204,8 @@ h6 {
   font-family: "GentonaAlt"; }
 
 p {
-  font-family: "GentonaLight"; }
+  font-family: "GentonaLight";
+  text-align: left; }
 
 /*------------------------------------*    #FORM
 \*------------------------------------*/
@@ -274,17 +276,24 @@ input[type=submit] {
 
 /*------------------------------------*    #BUTTONS
 \*------------------------------------*/
-button {
+.btn {
   border: 3px solid #f37021;
-  color: #f7670d;
+  color: #F37021;
   cursor: pointer;
   display: inline-block;
-  font: 700 16px/1 serif;
+  font-family: "GentonaAlt";
   letter-spacing: 2px;
-  padding: 15px 20px;
+  padding: 10px 20px;
   text-decoration: none;
   text-transform: uppercase;
-  background-color: transparent; }
+  background-color: transparent;
+  -webkit-transition: .2s ease-in-out;
+  -o-transition: .2s ease-in-out;
+  transition: .2s ease-in-out; }
+
+.btn:hover {
+  color: white;
+  background-color: #F37021; }
 
 /*------------------------------------*    #LAYOUT
 \*------------------------------------*/
@@ -425,37 +434,56 @@ header {
     bottom: 0;
     left: 0;
     right: 0; }
-  header .under-overline {
-    border-bottom: .5px solid white;
-    border-top: .5px solid white; }
   header .header {
     max-height: 650px;
     /*display: grid;
-		  grid-template-columns: repeat(12, 1fr);*/
-    position: relative; }
-    header .header__text {
+		  grid-template-columns: repeat(12, 1fr);*/ }
+    header .header__text:nth-child(1) {
       position: absolute;
       color: white;
-      text-align: left;
-      top: 50px;
+      font-family: "GentonaLight";
+      text-transform: uppercase;
+      top: 25px;
       left: 40px;
       bottom: 50px;
       right: 40px;
       z-index: 8000; }
-      header .header__text__thin {
-        font-family: "GentonaLight"; }
-      header .header__text__tagline {
-        position: absolute;
-        color: white;
-        text-transform: uppercase;
-        top: 66px;
-        left: 40px;
-        bottom: 50px;
-        right: 40px;
-        padding: 5px 0 5px 0;
-        z-index: 8000; }
+    header .header__text:nth-child(2) {
+      position: absolute;
+      color: white;
+      text-transform: uppercase;
+      top: 75px;
+      left: 40px;
+      bottom: 50px;
+      right: 40px;
+      z-index: 8000; }
+    header .header__text:nth-child(3) {
+      position: absolute;
+      color: white;
+      text-transform: uppercase;
+      top: 244px;
+      left: 40px;
+      bottom: 50px;
+      right: 40px;
+      padding: 5px 0 5px 0;
+      z-index: 8000; }
+      header .header__text:nth-child(3) span {
+        border-bottom: .5px solid white;
+        border-top: .5px solid white; }
+    header .header__text:nth-child(4) {
+      position: absolute;
+      color: white;
+      text-transform: uppercase;
+      top: 311px;
+      left: 40px;
+      bottom: 50px;
+      right: 40px;
+      padding: 5px 0 5px 0;
+      z-index: 8000; }
+      header .header__text:nth-child(4) span {
+        border-bottom: .5px solid white;
+        border-top: .5px solid white; }
     header .header__image {
-      /*grid-column: 1 / span 12;*/
       width: 100%;
       max-height: 700px;
       -o-object-fit: cover;
@@ -482,16 +510,78 @@ header {
 \*------------------------------------*/
 /*------------------------------------*    #HOME
 \*------------------------------------*/
+/*------------------------------------*    #CTA
+\*------------------------------------*/
 .cta {
   background-color: #0021a5;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
-  text-align: center; }
-  .cta__learn-more {
+  text-align: center;
+  position: relative;
+  background-color: #f2f0e9;
+  background-image: url("https://www.transparenttextures.com/patterns/small-crosses.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
+  .cta h3 {
+    font-size: 3.4375em;
+    line-height: 1;
+    color: #3F3E3D;
+    background: rgba(243, 112, 33, 0.5);
+    position: absolute;
+    left: -10;
+    top: -30;
+    margin: 0;
+    padding: 7px 7px 30px 7px; }
+  .cta h4 {
+    font-size: 1.8125em;
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 0 40px;
+    font-size: 1.5em; }
+  .cta__info {
     grid-column: 1 / span 4; }
-  .cta__apply {
-    grid-column: 5 / span 4; }
+    .cta__info__head {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); }
+      .cta__info__head h3 {
+        grid-column: 1 / span 4; }
+      .cta__info__head h4, .cta__info__head p {
+        grid-column: 4 / span 9;
+        margin: 0 0 20px 0; }
   .cta__contact {
+    grid-column: 5 / span 4; }
+    .cta__contact__head {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); }
+      .cta__contact__head h3 {
+        grid-column: 1 / span 4; }
+      .cta__contact__head h4, .cta__contact__head p {
+        grid-column: 4 / span 9;
+        margin: 0 0 20px 0; }
+  .cta__apply {
     grid-column: 9 / span 4; }
+    .cta__apply__head {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr); }
+      .cta__apply__head h3 {
+        grid-column: 1 / span 4; }
+      .cta__apply__head h4, .cta__apply__head p {
+        grid-column: 4 / span 9;
+        margin: 0 0 20px 0; }
+  .cta__info, .cta__contact, .cta__apply {
+    padding: 40px;
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column; }
+  .cta .btn {
+    width: 80%;
+    -webkit-align-self: flex-end;
+    -ms-flex-item-align: end;
+    align-self: flex-end; }
 
 /*# sourceMappingURL=main.css.map */

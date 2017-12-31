@@ -28,7 +28,7 @@ h2 {
 }
 
 h3 {
-  font-family: $sans-head-italic;
+  font-family: $sans-head;
 	font-weight: normal;
 	font-size: em(16px);
 }
@@ -47,4 +47,5 @@ h6 {
 
 p {
   font-family: $body;
+	text-align: left;
 }

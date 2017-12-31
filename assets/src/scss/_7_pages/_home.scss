@@ -6,19 +6,92 @@
 
 }
 
+/*------------------------------------*\
+    #CTA
+\*------------------------------------*/
 .cta {
   background-color: $blue;
   display: grid;
   grid-template-columns: repeat(12, 1fr);
   text-align: center;
+  position: relative;
+  @include white-bg-texture; //white background texture
 
-  &__learn-more {
-    grid-column: 1 / span 4;
+  h3 { //styles numbers
+    font-size: em(55px);
+    line-height: 1;
+    color: #3F3E3D;
+    background: rgba(243, 112, 33, .5);
+    position: absolute;
+    left: -10;
+    top: -30;
+    margin: 0;
+    padding: 7px 7px 30px 7px;
   }
-  &__apply {
-    grid-column: 5 / span 4;
+
+  h4 {
+    font-size: em(29px);
+    text-transform: uppercase;
+    text-align: center;
+    margin: 0 0 0 40px;
+    font-size: em(24px);
+  }
+
+  &__info {
+    grid-column: 1 / span 4;
+
+    &__head {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      h3 {
+        grid-column: 1 / span 4;
+      }
+      h4, p {
+        grid-column: 4 / span 9;
+        margin: 0 0 20px 0;
+      }
+    }
+
   }
   &__contact {
+    grid-column: 5 / span 4;
+
+    &__head {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      h3 {
+        grid-column: 1 / span 4;
+      }
+      h4, p {
+        grid-column: 4 / span 9;
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+  &__apply {
     grid-column: 9 / span 4;
+
+    &__head {
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
+      h3 {
+        grid-column: 1 / span 4;
+      }
+      h4, p {
+        grid-column: 4 / span 9;
+        margin: 0 0 20px 0;
+      }
+    }
+  }
+
+  &__info, &__contact, &__apply {
+    padding: $desktop-padding;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .btn {
+    width: 80%;
+    align-self: flex-end;
   }
 }

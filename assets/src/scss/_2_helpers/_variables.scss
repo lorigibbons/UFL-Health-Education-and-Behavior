@@ -6,12 +6,17 @@
 $baseurl 			: "/wp-content/themes/THEME-NAME";
 $font-path          : "#{$baseurl}/assets/dist/fonts";
 
+/* PADDING */
+$desktop-padding      : 40px;
+$mobile-padding       : 20px;
+
 
 /* COLORS */
-$orange              : #fa4616;
+$orange              : #F37021;
 $dark-orange         : #bb571b;
 $blue                : #0021a5;
 $light-blue          : #06529a;
+$grey                : #b1b3b6;
 
 
 /* FONTS */

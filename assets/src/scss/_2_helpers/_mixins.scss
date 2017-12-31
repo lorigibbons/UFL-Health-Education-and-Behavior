@@ -185,3 +185,20 @@
 		right: 0;
 	}
 }
+
+@mixin tagline-border() {
+		border-bottom: .5px solid white;
+		border-top: .5px solid white;
+	}
+
+@mixin blue-bg-texture {
+	background-color: #084b81;
+	background-image: url("https://www.transparenttextures.com/patterns/cross-stripes.png");
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you!  https://www.transparenttextures.com/ */
+}
+
+@mixin white-bg-texture {
+	background-color: #f2f0e9;
+	background-image: url("https://www.transparenttextures.com/patterns/small-crosses.png");
+	/* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
+}
