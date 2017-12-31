@@ -198,10 +198,12 @@ h2 {
 h3 {
   font-family: "GentonaAlt";
   font-weight: normal;
-  font-size: 2.25em; }
+  font-size: 2.25em;
+  text-transform: uppercase; }
 
 h4 {
-  font-family: "GentonaAlt"; }
+  font-family: "GentonaAlt";
+  text-transform: uppercase; }
 
 h5 {
   font-family: "GentonaAlt"; }
@@ -541,7 +543,6 @@ header {
     padding: 7px 7px 30px 7px; }
   .cta h4 {
     font-size: 1.8125em;
-    text-transform: uppercase;
     text-align: center;
     margin: 0 0 0 40px;
     font-size: 1.5em; }
@@ -606,7 +607,6 @@ header {
   height: 300px; }
   .val-statement h3 {
     grid-column: 1 / span 3;
-    text-transform: uppercase;
     padding: 40px;
     margin: 0; }
   .val-statement p {
@@ -634,8 +634,7 @@ header {
   padding: 40px; }
   .facts h3 {
     color: #06529a;
-    text-align: center;
-    text-transform: uppercase; }
+    text-align: center; }
   .facts__flex {
     display: -webkit-box;
     display: -webkit-flex;
@@ -666,7 +665,6 @@ header {
     -ms-flex: 1;
     flex: 1; }
     .val-statement-student__column h3 {
-      text-transform: uppercase;
       color: #bb571b; }
     .val-statement-student__column p {
       text-transform: uppercase;
@@ -693,5 +691,25 @@ header {
       bottom: 0;
       left: 0;
       right: 0; }
+
+/*------------------------------------*    #DEGREE OPTIONS SECTION
+\*------------------------------------*/
+.degree-options {
+  text-align: center;
+  padding: 40px;
+  background-color: #f2f0e9;
+  background-image: url("https://www.transparenttextures.com/patterns/small-crosses.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */ }
+  .degree-options h3 {
+    color: #06529a;
+    padding-bottom: 20px; }
+  .degree-options .btn {
+    margin-bottom: 20px; }
+  .degree-options h4 {
+    margin-bottom: 20px; }
+  .degree-options p {
+    width: 65%;
+    display: block;
+    margin: auto; }
 
 /*# sourceMappingURL=main.css.map */

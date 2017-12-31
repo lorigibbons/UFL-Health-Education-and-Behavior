@@ -31,7 +31,6 @@
 
   h4 {
     font-size: em(29px);
-    text-transform: uppercase;
     text-align: center;
     margin: 0 0 0 40px;
     font-size: em(24px);
@@ -110,7 +109,6 @@
 
   h3 {
     grid-column: 1 / span 3;
-    text-transform: uppercase;
     padding: $desktop-padding;
     margin: 0;
   }
@@ -147,7 +145,6 @@
   h3 {
     color: $light-blue;
     text-align: center;
-    text-transform: uppercase;
   }
   &__flex {
     display: flex;
@@ -176,7 +173,6 @@
     flex: 1;
 
     h3 {
-      text-transform: uppercase;
       color: $dark-orange;
     }
     p {
@@ -197,5 +193,33 @@
   &__column:last-child {
     position: relative;
     @include overlay;
+  }
+}
+
+/*------------------------------------*\
+    #DEGREE OPTIONS SECTION
+\*------------------------------------*/
+.degree-options {
+  text-align: center;
+  padding: $desktop-padding;
+  @include white-bg-texture;
+
+  h3 {
+    color: $light-blue;
+    padding-bottom: 20px;
+  }
+
+  .btn {
+    margin-bottom: 20px;
+  }
+
+  h4 {
+    margin-bottom: 20px;
+  }
+
+  p {
+    width: 65%;
+    display: block;
+    margin: auto;
   }
 }
