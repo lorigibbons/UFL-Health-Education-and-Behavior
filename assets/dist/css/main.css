@@ -205,7 +205,9 @@ h6 {
 
 p {
   font-family: "GentonaLight";
-  text-align: left; }
+  text-align: left;
+  font-size: 1em;
+  line-height: 21px; }
 
 /*------------------------------------*    #FORM
 \*------------------------------------*/
@@ -583,5 +585,26 @@ header {
     -webkit-align-self: flex-end;
     -ms-flex-item-align: end;
     align-self: flex-end; }
+
+/*------------------------------------*    #VALUE STATEMENT SECTION
+\*------------------------------------*/
+.val-statement {
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  background-color: #084b81;
+  background-image: url("https://www.transparenttextures.com/patterns/cross-stripes.png");
+  /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you!  https://www.transparenttextures.com/ */
+  color: white; }
+  .val-statement h2 {
+    grid-column: 1 / span 3;
+    text-transform: uppercase;
+    padding: 40px; }
+  .val-statement p {
+    grid-column: 4 / span 8;
+    padding: 40px; }
+  .val-statement__tagline {
+    grid-column: 4 / span 9; }
+    .val-statement__tagline p {
+      padding: 0; }
 
 /*# sourceMappingURL=main.css.map */
