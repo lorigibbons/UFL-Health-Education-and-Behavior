@@ -636,21 +636,62 @@ header {
     color: #06529a;
     text-align: center;
     text-transform: uppercase; }
-  .facts__grid {
+  .facts__flex {
     display: -webkit-box;
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     padding-top: 40px; }
-    .facts__grid__column {
+    .facts__flex__column {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
       text-align: center; }
-      .facts__grid__column svg {
+      .facts__flex__column svg {
         fill: white;
         height: 75px;
         width: 75px; }
+
+/*------------------------------------*    #STUDENT VALUE STATEMENT SECTION
+\*------------------------------------*/
+.val-statement-student {
+  display: -webkit-box;
+  display: -webkit-flex;
+  display: -ms-flexbox;
+  display: flex; }
+  .val-statement-student__column {
+    -webkit-box-flex: 1;
+    -webkit-flex: 1;
+    -ms-flex: 1;
+    flex: 1; }
+    .val-statement-student__column h3 {
+      text-transform: uppercase;
+      color: #bb571b; }
+    .val-statement-student__column p {
+      text-transform: uppercase;
+      color: #06529a;
+      font-size: 1.5em;
+      line-height: 1.625em; }
+    .val-statement-student__column img {
+      width: 100%;
+      height: 300px;
+      -o-object-fit: cover;
+      object-fit: cover; }
+  .val-statement-student__column:first-child {
+    padding: 40px; }
+  .val-statement-student__column:last-child {
+    position: relative; }
+    .val-statement-student__column:last-child:after {
+      background: #0021a5;
+      opacity: 0.4;
+      content: ' ';
+      width: 100%;
+      height: 100%;
+      position: absolute;
+      top: 0;
+      bottom: 0;
+      left: 0;
+      right: 0; }
 
 /*# sourceMappingURL=main.css.map */
