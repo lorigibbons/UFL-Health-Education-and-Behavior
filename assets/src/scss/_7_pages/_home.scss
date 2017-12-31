@@ -142,6 +142,7 @@
 \*------------------------------------*/
 .facts {
   @include white-bg-texture;
+  padding: $desktop-padding;
 
   h3 {
     color: $light-blue;
@@ -150,11 +151,17 @@
   }
   &__grid {
     display: flex;
+    padding-top: 40px;
 
     &__column {
       flex: 1;
       text-align: center;
+
+      svg {
+    		fill: white;
+    		height: 75px;
+    		width: 75px;
+    	}
     }
   }
-
 }
