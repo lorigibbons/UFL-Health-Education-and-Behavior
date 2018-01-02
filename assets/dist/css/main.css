@@ -443,49 +443,71 @@ header {
       position: absolute;
       color: white;
       font-family: "GentonaLight";
+      font-size: 1.3125em;
       text-transform: uppercase;
       top: 25px;
       left: 40px;
       bottom: 50px;
       right: 40px;
       z-index: 8000; }
+      @media (min-width: 640px) {
+        header .header__text:nth-child(1) {
+          top: 25px;
+          left: 40px;
+          bottom: 50px;
+          right: 40px; } }
     header .header__text:nth-child(2) {
       position: absolute;
       color: white;
+      font-size: 1.6875em;
       text-transform: uppercase;
-      top: 75px;
+      top: 60px;
       left: 40px;
       bottom: 50px;
       right: 40px;
       z-index: 8000; }
+      @media (min-width: 640px) {
+        header .header__text:nth-child(2) {
+          top: 75px; } }
     header .header__text:nth-child(3) {
       position: absolute;
       color: white;
+      font-size: 1.3125em;
       text-transform: uppercase;
-      top: 244px;
-      left: 40px;
+      top: 200px;
       bottom: 50px;
       right: 40px;
       padding: 5px 0 5px 0;
       z-index: 8000; }
+      @media (min-width: 640px) {
+        header .header__text:nth-child(3) {
+          top: 244px;
+          left: 40px;
+          bottom: 50px;
+          right: 40px; } }
       header .header__text:nth-child(3) span {
         border-bottom: .5px solid white;
         border-top: .5px solid white; }
     header .header__text:nth-child(4) {
       position: absolute;
       color: white;
+      font-size: 1.3125em;
       text-transform: uppercase;
-      top: 311px;
+      top: 187px;
       left: 40px;
       bottom: 50px;
       right: 40px;
       padding: 5px 0 5px 0;
       z-index: 8000; }
+      @media (min-width: 640px) {
+        header .header__text:nth-child(4) {
+          top: 311px; } }
       header .header__text:nth-child(4) span {
         border-bottom: .5px solid white;
         border-top: .5px solid white; }
     header .header__image {
       width: 100%;
+      min-height: 300px;
       max-height: 700px;
       -o-object-fit: cover;
       object-fit: cover;
@@ -522,54 +544,63 @@ header {
   background-color: #f2f0e9;
   background-image: url("https://www.transparenttextures.com/patterns/small-crosses.png");
   /* This is mostly intended for prototyping; please download the pattern and re-host for production environments. Thank you! */
-  padding: 40px; }
+  padding: 20px; }
+  @media (min-width: 1024px) {
+    .cta {
+      padding: 40px; } }
   .cta h3 {
     font-size: 3.4375em;
     line-height: 1;
     color: #3F3E3D;
     background: rgba(243, 112, 33, 0.5);
     position: absolute;
-    left: -10;
-    top: -30;
-    margin: 0;
-    padding: 7px 7px 30px 7px; }
+    padding: 7px 7px 40px 7px; }
   .cta h4 {
     font-size: 1.8125em;
     text-align: center;
     margin: 0 0 0 40px;
     font-size: 1.5em; }
   .cta__info {
-    grid-column: 1 / span 4; }
+    grid-column: 1 / span 12; }
+    @media (min-width: 1024px) {
+      .cta__info {
+        grid-column: 1 / span 4; } }
     .cta__info__head {
       display: grid;
       grid-template-columns: repeat(12, 1fr); }
       .cta__info__head h3 {
         grid-column: 1 / span 4; }
       .cta__info__head h4, .cta__info__head p {
-        grid-column: 4 / span 9;
+        grid-column: 5 / span 9;
         margin: 0 0 20px 0; }
   .cta__contact {
-    grid-column: 5 / span 4; }
+    grid-column: 1 / span 12; }
+    @media (min-width: 1024px) {
+      .cta__contact {
+        grid-column: 5 / span 4; } }
     .cta__contact__head {
       display: grid;
       grid-template-columns: repeat(12, 1fr); }
       .cta__contact__head h3 {
         grid-column: 1 / span 4; }
       .cta__contact__head h4, .cta__contact__head p {
-        grid-column: 4 / span 9;
+        grid-column: 5 / span 9;
         margin: 0 0 20px 0; }
   .cta__apply {
-    grid-column: 9 / span 4; }
+    grid-column: 1 / span 12; }
+    @media (min-width: 1024px) {
+      .cta__apply {
+        grid-column: 9 / span 4; } }
     .cta__apply__head {
       display: grid;
       grid-template-columns: repeat(12, 1fr); }
       .cta__apply__head h3 {
         grid-column: 1 / span 4; }
       .cta__apply__head h4, .cta__apply__head p {
-        grid-column: 4 / span 9;
+        grid-column: 5 / span 9;
         margin: 0 0 20px 0; }
   .cta__info, .cta__contact, .cta__apply {
-    padding: 40px;
+    padding: 20px;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -577,11 +608,20 @@ header {
     -webkit-box-direction: normal;
     -ms-flex-direction: column;
     flex-direction: column; }
+    @media (min-width: 1024px) {
+      .cta__info, .cta__contact, .cta__apply {
+        padding: 40px; } }
   .cta .btn {
-    width: 80%;
-    -ms-flex-item-align: end;
-    align-self: flex-end;
-    margin-top: auto; }
+    width: 100%; }
+    @media (min-width: 480px) {
+      .cta .btn {
+        width: 40%; } }
+    @media (min-width: 1024px) {
+      .cta .btn {
+        width: 70%;
+        -ms-flex-item-align: end;
+        align-self: flex-end;
+        margin-top: auto; } }
 
 /*------------------------------------*    #VALUE STATEMENT PROGRAM SECTION
 \*------------------------------------*/

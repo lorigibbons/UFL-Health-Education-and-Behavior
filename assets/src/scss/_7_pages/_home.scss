@@ -16,7 +16,11 @@
   text-align: center;
   position: relative;
   @include white-bg-texture; //white background texture
-  padding: $desktop-padding;
+  padding: $mobile-padding;
+
+  @include breakpoint(medium) { //1024px +
+    padding: $desktop-padding;
+  }
 
   h3 { //styles numbers
     font-size: em(55px);
@@ -24,10 +28,7 @@
     color: #3F3E3D;
     background: rgba(243, 112, 33, .5);
     position: absolute;
-    left: -10;
-    top: -30;
-    margin: 0;
-    padding: 7px 7px 30px 7px;
+    padding: 7px 7px 40px 7px;
   }
 
   h4 {
@@ -38,7 +39,11 @@
   }
 
   &__info {
-    grid-column: 1 / span 4;
+    grid-column: 1 / span 12;
+
+    @include breakpoint(medium) { //1024px +
+      grid-column: 1 / span 4;
+    }
 
     &__head {
       display: grid;
@@ -47,14 +52,18 @@
         grid-column: 1 / span 4;
       }
       h4, p {
-        grid-column: 4 / span 9;
+        grid-column: 5 / span 9;
         margin: 0 0 20px 0;
       }
     }
 
   }
   &__contact {
-    grid-column: 5 / span 4;
+    grid-column: 1 / span 12;
+
+    @include breakpoint(medium) { //1024px +
+      grid-column: 5 / span 4;
+    }
 
     &__head {
       display: grid;
@@ -63,13 +72,17 @@
         grid-column: 1 / span 4;
       }
       h4, p {
-        grid-column: 4 / span 9;
+        grid-column: 5 / span 9;
         margin: 0 0 20px 0;
       }
     }
   }
   &__apply {
-    grid-column: 9 / span 4;
+    grid-column: 1 / span 12;
+
+    @include breakpoint(medium) { //1024px +
+      grid-column: 9 / span 4;
+    }
 
     &__head {
       display: grid;
@@ -78,22 +91,34 @@
         grid-column: 1 / span 4;
       }
       h4, p {
-        grid-column: 4 / span 9;
+        grid-column: 5 / span 9;
         margin: 0 0 20px 0;
       }
     }
   }
 
   &__info, &__contact, &__apply {
-    padding: $desktop-padding;
+    padding: $mobile-padding;
     display: flex;
     flex-direction: column;
+
+    @include breakpoint(medium) { //1024px +
+      padding: $desktop-padding;
+    }
   }
 
   .btn {
-    width: 80%;
-    align-self: flex-end;
-    margin-top: auto;
+    width: 100%;
+
+    @include breakpoint(large-mobile) { //480px +
+      width: 40%;
+    }
+
+    @include breakpoint(medium) { //1024px +
+      width: 70%;
+      align-self: flex-end;
+      margin-top: auto;
+    }
   }
 }
 

@@ -144,35 +144,56 @@ header {
 				position: absolute;
 				color: white;
 				font-family: $body;
+				font-size: em(21px);
 				text-transform: uppercase;
 				top: 25px;
 				left: 40px;
 				bottom: 50px;
 				right: 40px;
 				z-index: map-get($zindex, overlay);
+
+				@include breakpoint(small) { //640 px +
+					top: 25px;
+					left: 40px;
+					bottom: 50px;
+					right: 40px;
+				}
 			}
 
 			&__text:nth-child(2) {
 				position: absolute;
 				color: white;
+				font-size: em(27px);
 				text-transform: uppercase;
-				top: 75px;
+				top: 60px;
 				left: 40px;
 				bottom: 50px;
 				right: 40px;
 				z-index: map-get($zindex, overlay);
+
+				@include breakpoint(small) { //640 px +
+					top: 75px;
+				}
 			}
 
 			&__text:nth-child(3) {
 				position: absolute;
 				color: white;
+				font-size: em(21px);
 				text-transform: uppercase;
-				top: 244px;
-				left: 40px;
+				top: 200px;
 				bottom: 50px;
 				right: 40px;
 				padding: 5px 0 5px 0;
 				z-index: map-get($zindex, overlay);
+
+
+				@include breakpoint(small) { //640 px +
+					top: 244px;
+					left: 40px;
+					bottom: 50px;
+					right: 40px;
+				}
 
 				span {
 					@include tagline-border;
@@ -182,13 +203,18 @@ header {
 			&__text:nth-child(4) {
 				position: absolute;
 				color: white;
+				font-size: em(21px);
 				text-transform: uppercase;
-				top: 311px;
+				top: 187px;
 				left: 40px;
 				bottom: 50px;
 				right: 40px;
 				padding: 5px 0 5px 0;
 				z-index: map-get($zindex, overlay);
+
+				@include breakpoint(small) { //640 px +
+					top: 311px;
+				}
 
 				span {
 					@include tagline-border;
@@ -197,6 +223,7 @@ header {
 
 			&__image {
 			  width: 100%;
+				min-height: 300px;
 				max-height: 700px;
 			  object-fit: cover;
 				top: 0;
