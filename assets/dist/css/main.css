@@ -325,6 +325,7 @@ input[type=submit] {
       z-index: 9500; } }
   .nav__navigation {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     list-style: none;
@@ -332,10 +333,12 @@ input[type=submit] {
     padding: 0;
     grid-column: 1 / span 7;
     -webkit-box-align: center;
+    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
     .nav__navigation > li {
       -webkit-box-flex: 1;
+      -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
       text-align: center; }
@@ -347,14 +350,17 @@ input[type=submit] {
     padding: 0;
     grid-column: 11 / span 2;
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-align: center;
+    -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center;
     padding-top: 7px; }
     .nav ul.nav__social-media > li {
       -webkit-box-flex: 1;
+      -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1; }
 
@@ -376,12 +382,15 @@ input[type=submit] {
 .mobile-nav {
   background: #bb571b;
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   -webkit-box-align: center;
+  -webkit-align-items: center;
   -ms-flex-align: center;
   align-items: center;
   -webkit-box-pack: center;
+  -webkit-justify-content: center;
   -ms-flex-pack: center;
   justify-content: center;
   position: fixed;
@@ -602,10 +611,12 @@ header {
   .cta__info, .cta__contact, .cta__apply {
     padding: 20px;
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column; }
     @media (min-width: 1024px) {
@@ -619,6 +630,7 @@ header {
     @media (min-width: 1024px) {
       .cta .btn {
         width: 70%;
+        -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
         align-self: flex-end;
         margin-top: auto; } }
@@ -689,26 +701,32 @@ header {
     text-align: center; }
   .facts__flex {
     display: -webkit-box;
+    display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
     -ms-flex-direction: column;
     flex-direction: column;
     -webkit-box-pack: center;
+    -webkit-justify-content: center;
     -ms-flex-pack: center;
     justify-content: center;
     -webkit-box-align: start;
+    -webkit-align-items: flex-start;
     -ms-flex-align: start;
     align-items: flex-start; }
     @media (min-width: 1024px) {
       .facts__flex {
         -webkit-box-orient: horizontal;
         -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
         -ms-flex-direction: row;
         flex-direction: row; } }
     .facts__flex__column {
       -webkit-box-flex: 1;
+      -webkit-flex: 1;
       -ms-flex: 1;
       flex: 1;
       text-align: center;
@@ -716,6 +734,7 @@ header {
       padding: 20px; }
       .facts__flex__column .test {
         width: 100%;
+        -webkit-align-self: flex-end;
         -ms-flex-item-align: end;
         align-self: flex-end;
         margin-top: auto; }
@@ -724,21 +743,25 @@ header {
 \*------------------------------------*/
 .val-statement-student {
   display: -webkit-box;
+  display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
   max-height: 400px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
+  -webkit-flex-direction: column;
   -ms-flex-direction: column;
   flex-direction: column; }
   @media (min-width: 1024px) {
     .val-statement-student {
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
+      -webkit-flex-direction: row;
       -ms-flex-direction: row;
       flex-direction: row; } }
   .val-statement-student__column {
     -webkit-box-flex: 1;
+    -webkit-flex: 1;
     -ms-flex: 1;
     flex: 1; }
     .val-statement-student__column h3 {
@@ -796,8 +819,11 @@ header {
   .degree-options h4 {
     margin-bottom: 20px; }
   .degree-options p {
-    width: 65%;
+    width: 100%;
     display: block;
     margin: auto; }
+    @media (min-width: 640px) {
+      .degree-options p {
+        width: 65%; } }
 
 /*# sourceMappingURL=main.css.map */

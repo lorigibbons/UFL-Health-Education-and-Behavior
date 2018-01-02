@@ -300,8 +300,12 @@
   }
 
   p {
-    width: 65%;
+    width: 100%;
     display: block;
     margin: auto;
+
+    @include breakpoint(small) {  //640px +
+      width: 65%;
+    }
   }
 }
