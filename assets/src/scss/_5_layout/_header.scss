@@ -15,7 +15,7 @@
 	letter-spacing: em(2px);
 	transition: font-size .2s ease-in-out;
 
-	@include breakpoint(portrait) {  //display over 768px
+	@include breakpoint(small) {
 		display: block;
 		z-index: map-get($zindex, navigation);
 	}
@@ -34,6 +34,12 @@
 		display: flex;  //parent for flexbox
 		@include no-bullets;
 		align-items: center;
+		flex-wrap: wrap;
+
+
+		@include breakpoint(smaller-screen) {
+			flex-wrap: nowrap;
+		}
 
 		.grow {
 			transition: all .2s ease-in-out;
@@ -52,6 +58,7 @@
 				}
 				&:link {
 					text-decoration: none;
+					color: white;
 				}f
 				&:visited {
 
@@ -78,80 +85,81 @@
 	/*------------------------------------*\
 	    #HAMBURGER
 	\*------------------------------------*/
-.hamburger {
+.hamburger-icon {
 	position: absolute;
 	left: 10px;
 	top: 10px;
-	z-index: map-get($zindex, hamburger);
+	z-index: map-get($zindex, mobile-nav);
 
-	@include breakpoint(portrait) {  //do not dislay this after 768 px
+	@include breakpoint(small) {  //do not dislay hamburger after 768 px
 		display: none;
 	}
 
-	svg {
-		fill: $light-blue;
-		height: 30px;
+	a {
 		width: 30px;
+		height: 30px;
+		color: white;
+		text-decoration: none;
 	}
 }
 
 .mobile-nav {
-	background: $dark-orange;
+	background: $light-blue;
+	position: fixed;
+	left: 0;
+	top: -100%;
+	bottom: 100%;
+	right: 0;
 	display: flex;
 	align-items: center;
 	justify-content: center;
-	position: fixed;
-	left: 0;
-	right: 0;
-	bottom: 100%;
-	top: -100%;
-	transition: bottom 0.25s ease-in-out, top 0.25s ease-in-out;
+	color: white;
 	z-index: map-get($zindex, mobile-nav);
+	transition: 0.25s ease-in-out;
+
+	@include breakpoint(small) {
+		display: none;
+	}
 
 	&.open {
 		bottom: 0;
 		top: 0;
 	}
 
+	ul {
+		@include no-bullets;
+		text-decoration: none;
+		li {
+			padding: 10px 0;
+			a {
+				color: white;
+				text-decoration: none;
+			}
+		}
+	}
+
 	&__close {
-		color: black;
+		color: white;
 		position: absolute;
 		right: 10px;
 		top: 10px;
 
 		a {
-			text-decoration: none;
-			font-size: em(32px);
-		}
-	}
-
-	ul {
-		@include no-bullets;
-
-		li {
-			font-family: $body;
-			font-size: em(24px);
-			line-height: 1.33;
-			letter-spacing: 2.7px;
-			text-align: center;
-			margin-bottom: 20px;
-		}
-
-		a {
 			color: white;
+			font-size: em(32px);
 			text-decoration: none;
-			text-transform: uppercase;
 		}
 	}
 }
-
 
 /*------------------------------------*\
     #HEADER
 \*------------------------------------*/
 header {
+		@include blue-bg-texture;
 		@include overlay;
 		position: relative;
+
 
 		.header {
 		  max-height: 650px;
