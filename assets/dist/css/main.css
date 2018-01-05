@@ -791,7 +791,7 @@ footer {
   color: white;
   position: relative;
   width: 100%;
-  height: 600px; }
+  height: 550px; }
   @media (min-width: 1024px) {
     .val-statement {
       height: 400px; } }
@@ -827,10 +827,14 @@ footer {
     @media (min-width: 640px) {
       .val-statement__tagline {
         top: 75%; } }
+    @media (min-width: 800px) {
+      .val-statement__tagline {
+        padding: 10px; } }
     .val-statement__tagline p {
       text-transform: uppercase;
-      font-size: 1.5em; }
-      @media (min-width: 640px) {
+      font-size: 1.5em;
+      padding: 20px; }
+      @media (min-width: 800px) {
         .val-statement__tagline p {
           display: inline; } }
 
