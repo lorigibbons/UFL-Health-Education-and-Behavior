@@ -6,26 +6,44 @@
 	display: none;  //hide for mobile portrait 768px
 	background-color: $dark-orange;
 	text-transform: uppercase;
-	height: 35px;
 	width: 100%;
 	position: sticky;
 	top: 0;
-
+	font-family: $sans-head;
+	color: white;
+	font-size: em(14px);
+	letter-spacing: em(2px);
+	transition: font-size .2s ease-in-out;
 
 	@include breakpoint(portrait) {  //display over 768px
-		display: grid;
-		grid-template-columns: repeat(12, 1fr);
+		display: block;
 		z-index: map-get($zindex, navigation);
 	}
 
+	.logo {
+		width: 50px;
+		height: 50px;
+		display: block;
+		margin: 0 auto auto 0;
+		background: $light-blue;
+		object-position: center center;
+
+	}
+
 	&__navigation {
-		display: flex;  //parent
+		display: flex;  //parent for flexbox
 		@include no-bullets;
-		grid-column: 1 / span 7;
 		align-items: center;
 
+		.grow {
+			transition: all .2s ease-in-out;
+		}
+		.grow:hover {
+			transform: scale(1.05);
+		}
+
 		> li {
-			flex: 1; //child
+			flex: 1; //child for flexbox
 			text-align: center;
 
 			> a {
@@ -34,7 +52,7 @@
 				}
 				&:link {
 					text-decoration: none;
-				}
+				}f
 				&:visited {
 
 				}
@@ -147,16 +165,25 @@ header {
 				font-size: em(21px);
 				text-transform: uppercase;
 				top: 25px;
-				left: 40px;
+				left: 20px;
 				bottom: 50px;
-				right: 40px;
+				right: 20px;
 				z-index: map-get($zindex, overlay);
 
 				@include breakpoint(small) { //640 px +
+					font-size: em(27px);
 					top: 25px;
 					left: 40px;
 					bottom: 50px;
 					right: 40px;
+				}
+
+				@include breakpoint(smaller-screen) { //800 px +
+					font-size: 3vw;
+				}
+
+				@include breakpoint(xxlarge) {  //1921px
+					font-size: em(60px)
 				}
 			}
 
@@ -166,13 +193,30 @@ header {
 				font-size: em(27px);
 				text-transform: uppercase;
 				top: 60px;
-				left: 40px;
+				left: 20px;
 				bottom: 50px;
-				right: 40px;
+				right: 20px;
 				z-index: map-get($zindex, overlay);
 
 				@include breakpoint(small) { //640 px +
-					top: 75px;
+					font-size: em(32px);
+					top: 60px;
+					left: 40px;
+					bottom: 50px;
+					right: 40px;
+				}
+
+				@include breakpoint(smaller-screen) { //800 px +
+					font-size: 4vw;
+					top: 70px;
+				}
+
+				@include breakpoint(regular-screen) { //1200px
+					top: 80px;
+				}
+
+				@include breakpoint(xxlarge) {  //1921px
+					font-size: em(75px)
 				}
 			}
 
@@ -183,16 +227,31 @@ header {
 				text-transform: uppercase;
 				top: 200px;
 				bottom: 50px;
-				right: 40px;
+				right: 20px;
+				left: 20px;
 				padding: 5px 0 5px 0;
 				z-index: map-get($zindex, overlay);
 
+				@include breakpoint(small-mobile) { //320 px +
+					top: 188px;
+				}
+
 
 				@include breakpoint(small) { //640 px +
-					top: 244px;
+					font-size: em(24px);
+					top: 194px;
 					left: 40px;
 					bottom: 50px;
 					right: 40px;
+				}
+
+				@include breakpoint(smaller-screen) { //800 px +
+					font-size: 2.5vw;
+					top: 234px;
+				}
+
+				@include breakpoint(xxlarge) {  //1921px
+					font-size: em(45px)
 				}
 
 				span {
@@ -205,15 +264,29 @@ header {
 				color: white;
 				font-size: em(21px);
 				text-transform: uppercase;
-				top: 187px;
-				left: 40px;
+				top: 233px;
 				bottom: 50px;
-				right: 40px;
+				right: 20px;
+				left: 20px;
 				padding: 5px 0 5px 0;
 				z-index: map-get($zindex, overlay);
 
 				@include breakpoint(small) { //640 px +
-					top: 311px;
+					top: 240px;
+					left: 40px;
+				}
+
+				@include breakpoint(smaller-screen) { //800 px +
+					font-size: 2.5vw;
+					top: 297px;
+				}
+
+				@include breakpoint(large) {  //1200px
+					top: 300px;
+				}
+
+				@include breakpoint(xxlarge) {  //1921px
+					font-size: em(45px)
 				}
 
 				span {

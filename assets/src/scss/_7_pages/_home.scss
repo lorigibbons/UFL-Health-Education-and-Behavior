@@ -201,6 +201,7 @@
     color: $light-blue;
     text-align: center;
   }
+
   &__flex {
     display: flex;
     flex-direction: column;
@@ -217,10 +218,19 @@
       width: 100%;
       padding: 20px;
 
-      .test {
-        width: 100%;
-        align-self: flex-end;
-        margin-top: auto;
+      h4 {
+        margin-bottom: 20px;
+      }
+
+      a {
+        display: flex;
+
+        img {
+          flex: 1;
+          align-self: flex-end;
+          margin-top: auto;
+          height: 70px;
+        }
       }
     }
   }
@@ -231,10 +241,10 @@
 \*------------------------------------*/
 .val-statement-student {
   display: flex;
-  max-height: 400px;
   flex-direction: column;
 
   @include breakpoint (medium) { //1024 + px
+    max-height: 400px;
     flex-direction: row;
   }
 

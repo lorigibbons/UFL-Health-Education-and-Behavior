@@ -14,7 +14,8 @@ $breakpoints: (
 	portrait: 768px,
 	small: 640px,
 	large-mobile: 480px,
-	mobile: 360px
+	mobile: 360px,
+	small-mobile: 320px
 );
 
 @mixin breakpoint($breakpoint) {

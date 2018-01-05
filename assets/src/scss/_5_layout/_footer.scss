@@ -1,9 +1,78 @@
 /*------------------------------------*\
     #FOOTER
 \*------------------------------------*/
-.footer {
+footer {
+	padding: $desktop-padding;
+	line-height: em(24px);
+
+	h4 {
+		margin-bottom: 10px;
+	}
+
+	.columns {
+		display: flex;
+		flex-direction: column;
+		text-align: center;
+
+		@include breakpoint(portrait) {
+			flex-direction: row;
+			text-align: left;
+		}
+
+		&__one-column {
+			flex: 1;
+			padding: $mobile-padding;
+
+			@include breakpoint(portrait) {
+				padding: none;
+			}
+
+			&__ufsig {
+
+				.signature {
+					width: 200px;
+				}
+
+				ul li {
+					display: inline;
+				}
+			}
+			&__address p {
+				margin: 0;
+				font-size: em(14px);
+
+				@include breakpoint(portrait) {
+					text-align: center;
+				}
+			}
+		}
+	}
+
+
+	h4 {
+		color: $light-blue;
+	}
+
+	ul {
+		@include no-bullets;
+
+		li {
+
+			a {
+				text-decoration: none;
+				color: $dark-orange;
+				text-transform: uppercase;
+				font-family: $body;
+				transition: .2s ease-in-out;
+			}
+			a:hover {
+				color: $orange;
+			}
+		}
+	}
 
 	.copyright {
-		
+		font-size: em(12px);
+		text-align: center;
 	}
 }

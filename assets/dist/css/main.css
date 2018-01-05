@@ -313,16 +313,29 @@ input[type=submit] {
   display: none;
   background-color: #bb571b;
   text-transform: uppercase;
-  height: 35px;
   width: 100%;
   position: -webkit-sticky;
   position: sticky;
-  top: 0; }
+  top: 0;
+  font-family: "GentonaAlt";
+  color: white;
+  font-size: 0.875em;
+  letter-spacing: 0.125em;
+  -webkit-transition: font-size .2s ease-in-out;
+  -o-transition: font-size .2s ease-in-out;
+  transition: font-size .2s ease-in-out; }
   @media (min-width: 768px) {
     .nav {
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      display: block;
       z-index: 9500; } }
+  .nav .logo {
+    width: 50px;
+    height: 50px;
+    display: block;
+    margin: 0 auto auto 0;
+    background: #06529a;
+    -o-object-position: center center;
+    object-position: center center; }
   .nav__navigation {
     display: -webkit-box;
     display: -webkit-flex;
@@ -331,11 +344,18 @@ input[type=submit] {
     list-style: none;
     margin: 0;
     padding: 0;
-    grid-column: 1 / span 7;
     -webkit-box-align: center;
     -webkit-align-items: center;
     -ms-flex-align: center;
     align-items: center; }
+    .nav__navigation .grow {
+      -webkit-transition: all .2s ease-in-out;
+      -o-transition: all .2s ease-in-out;
+      transition: all .2s ease-in-out; }
+    .nav__navigation .grow:hover {
+      -webkit-transform: scale(1.05);
+      -ms-transform: scale(1.05);
+      transform: scale(1.05); }
     .nav__navigation > li {
       -webkit-box-flex: 1;
       -webkit-flex: 1;
@@ -455,29 +475,50 @@ header {
       font-size: 1.3125em;
       text-transform: uppercase;
       top: 25px;
-      left: 40px;
+      left: 20px;
       bottom: 50px;
-      right: 40px;
+      right: 20px;
       z-index: 8000; }
       @media (min-width: 640px) {
         header .header__text:nth-child(1) {
+          font-size: 1.6875em;
           top: 25px;
           left: 40px;
           bottom: 50px;
           right: 40px; } }
+      @media (min-width: 800px) {
+        header .header__text:nth-child(1) {
+          font-size: 3vw; } }
+      @media (min-width: 1921px) {
+        header .header__text:nth-child(1) {
+          font-size: 3.75em; } }
     header .header__text:nth-child(2) {
       position: absolute;
       color: white;
       font-size: 1.6875em;
       text-transform: uppercase;
       top: 60px;
-      left: 40px;
+      left: 20px;
       bottom: 50px;
-      right: 40px;
+      right: 20px;
       z-index: 8000; }
       @media (min-width: 640px) {
         header .header__text:nth-child(2) {
-          top: 75px; } }
+          font-size: 2em;
+          top: 60px;
+          left: 40px;
+          bottom: 50px;
+          right: 40px; } }
+      @media (min-width: 800px) {
+        header .header__text:nth-child(2) {
+          font-size: 4vw;
+          top: 70px; } }
+      @media (min-width: 1200px) {
+        header .header__text:nth-child(2) {
+          top: 80px; } }
+      @media (min-width: 1921px) {
+        header .header__text:nth-child(2) {
+          font-size: 4.6875em; } }
     header .header__text:nth-child(3) {
       position: absolute;
       color: white;
@@ -485,15 +526,27 @@ header {
       text-transform: uppercase;
       top: 200px;
       bottom: 50px;
-      right: 40px;
+      right: 20px;
+      left: 20px;
       padding: 5px 0 5px 0;
       z-index: 8000; }
+      @media (min-width: 320px) {
+        header .header__text:nth-child(3) {
+          top: 188px; } }
       @media (min-width: 640px) {
         header .header__text:nth-child(3) {
-          top: 244px;
+          font-size: 1.5em;
+          top: 194px;
           left: 40px;
           bottom: 50px;
           right: 40px; } }
+      @media (min-width: 800px) {
+        header .header__text:nth-child(3) {
+          font-size: 2.5vw;
+          top: 234px; } }
+      @media (min-width: 1921px) {
+        header .header__text:nth-child(3) {
+          font-size: 2.8125em; } }
       header .header__text:nth-child(3) span {
         border-bottom: .5px solid white;
         border-top: .5px solid white; }
@@ -502,15 +555,26 @@ header {
       color: white;
       font-size: 1.3125em;
       text-transform: uppercase;
-      top: 187px;
-      left: 40px;
+      top: 233px;
       bottom: 50px;
-      right: 40px;
+      right: 20px;
+      left: 20px;
       padding: 5px 0 5px 0;
       z-index: 8000; }
       @media (min-width: 640px) {
         header .header__text:nth-child(4) {
-          top: 311px; } }
+          top: 240px;
+          left: 40px; } }
+      @media (min-width: 800px) {
+        header .header__text:nth-child(4) {
+          font-size: 2.5vw;
+          top: 297px; } }
+      @media (min-width: 1500px) {
+        header .header__text:nth-child(4) {
+          top: 300px; } }
+      @media (min-width: 1921px) {
+        header .header__text:nth-child(4) {
+          font-size: 2.8125em; } }
       header .header__text:nth-child(4) span {
         border-bottom: .5px solid white;
         border-top: .5px solid white; }
@@ -524,6 +588,69 @@ header {
 
 /*------------------------------------*    #FOOTER
 \*------------------------------------*/
+footer {
+  padding: 40px;
+  line-height: 1.5em; }
+  footer h4 {
+    margin-bottom: 10px; }
+  footer .columns {
+    display: -webkit-box;
+    display: -webkit-flex;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+    -webkit-flex-direction: column;
+    -ms-flex-direction: column;
+    flex-direction: column;
+    text-align: center; }
+    @media (min-width: 768px) {
+      footer .columns {
+        -webkit-box-orient: horizontal;
+        -webkit-box-direction: normal;
+        -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+        flex-direction: row;
+        text-align: left; } }
+    footer .columns__one-column {
+      -webkit-box-flex: 1;
+      -webkit-flex: 1;
+      -ms-flex: 1;
+      flex: 1;
+      padding: 20px; }
+      @media (min-width: 768px) {
+        footer .columns__one-column {
+          padding: none; } }
+      footer .columns__one-column__ufsig .signature {
+        width: 200px; }
+      footer .columns__one-column__ufsig ul li {
+        display: inline; }
+      footer .columns__one-column__address p {
+        margin: 0;
+        font-size: 0.875em; }
+        @media (min-width: 768px) {
+          footer .columns__one-column__address p {
+            text-align: center; } }
+  footer h4 {
+    color: #06529a; }
+  footer ul {
+    list-style: none;
+    margin: 0;
+    padding: 0; }
+    footer ul li a {
+      text-decoration: none;
+      color: #bb571b;
+      text-transform: uppercase;
+      font-family: "GentonaLight";
+      -webkit-transition: .2s ease-in-out;
+      -o-transition: .2s ease-in-out;
+      transition: .2s ease-in-out; }
+    footer ul li a:hover {
+      color: #F37021; }
+  footer .copyright {
+    font-size: 0.75em;
+    text-align: center; }
+
 /*------------------------------------*    #PIECES
 \*------------------------------------*/
 /*------------------------------------*    #GRAVITY-FORMS
@@ -732,12 +859,23 @@ header {
       text-align: center;
       width: 100%;
       padding: 20px; }
-      .facts__flex__column .test {
-        width: 100%;
-        -webkit-align-self: flex-end;
-        -ms-flex-item-align: end;
-        align-self: flex-end;
-        margin-top: auto; }
+      .facts__flex__column h4 {
+        margin-bottom: 20px; }
+      .facts__flex__column a {
+        display: -webkit-box;
+        display: -webkit-flex;
+        display: -ms-flexbox;
+        display: flex; }
+        .facts__flex__column a img {
+          -webkit-box-flex: 1;
+          -webkit-flex: 1;
+          -ms-flex: 1;
+          flex: 1;
+          -webkit-align-self: flex-end;
+          -ms-flex-item-align: end;
+          align-self: flex-end;
+          margin-top: auto;
+          height: 70px; }
 
 /*------------------------------------*    #STUDENT VALUE STATEMENT SECTION
 \*------------------------------------*/
@@ -746,7 +884,6 @@ header {
   display: -webkit-flex;
   display: -ms-flexbox;
   display: flex;
-  max-height: 400px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
   -webkit-flex-direction: column;
@@ -754,6 +891,7 @@ header {
   flex-direction: column; }
   @media (min-width: 1024px) {
     .val-statement-student {
+      max-height: 400px;
       -webkit-box-orient: horizontal;
       -webkit-box-direction: normal;
       -webkit-flex-direction: row;
