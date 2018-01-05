@@ -40,9 +40,10 @@ footer {
 			&__address p {
 				margin: 0;
 				font-size: em(14px);
+				text-align: center;
 
 				@include breakpoint(portrait) {
-					text-align: center;
+					text-align: left;
 				}
 			}
 		}

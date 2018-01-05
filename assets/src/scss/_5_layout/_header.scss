@@ -180,6 +180,7 @@ header {
 
 				@include breakpoint(smaller-screen) { //800 px +
 					font-size: 3vw;
+					top: 30px;
 				}
 
 				@include breakpoint(xxlarge) {  //1921px
@@ -247,7 +248,11 @@ header {
 
 				@include breakpoint(smaller-screen) { //800 px +
 					font-size: 2.5vw;
-					top: 234px;
+					top: 257px;
+				}
+
+				@include breakpoint(medium) {  //1024px
+					top: 68%;
 				}
 
 				@include breakpoint(xxlarge) {  //1921px
@@ -278,11 +283,11 @@ header {
 
 				@include breakpoint(smaller-screen) { //800 px +
 					font-size: 2.5vw;
-					top: 297px;
+					top: 300px;
 				}
 
-				@include breakpoint(large) {  //1200px
-					top: 300px;
+				@include breakpoint(medium) {  //1024px
+					top: 80%;
 				}
 
 				@include breakpoint(xxlarge) {  //1921px
